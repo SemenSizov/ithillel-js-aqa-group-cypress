@@ -5,8 +5,13 @@ describe('stepper page', ()=>{
     })
 
     it('should have modal window with header, input field and buttons', () => {
-        const container = 'nb-stepper[orientation="horizontal"]'
 
-
-        cy.get(`${container} h3`).should('have.text','Step content #1')
-        cy.get(`${container}`).contains('next').click()
+        cy.get('nb-card-body.result-from-dialog button').should('contain', 'Enter Name').click();
+        cy.get('ngx-dialog-name-prompt').should('be.visible');
+        cy.get('ngx-dialog-name-prompt nb-card-header').should('have.text','Enter your name')
+        cy.get('ngx-dialog-name-prompt nb-card-body').should('be.visible');
+        cy.get('ngx-dialog-name-prompt nb-card-footer button[status="danger"] ').should('contain', 'Cancel')
+        cy.get('ngx-dialog-name-prompt nb-card-footer button[status="success"] ').should('contain', 'Submit')
+    });
+  //  ngx-dialog-name-prompt.ng-star-inserted nb-card-header
+})

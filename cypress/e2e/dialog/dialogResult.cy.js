@@ -13,5 +13,4 @@ describe('stepper page', ()=>{
         cy.get('ngx-dialog-name-prompt nb-card-footer button[status="danger"] ').should('contain', 'Cancel')
         cy.get('ngx-dialog-name-prompt nb-card-footer button[status="success"] ').should('contain', 'Submit')
     });
-  //  ngx-dialog-name-prompt.ng-star-inserted nb-card-header
 })

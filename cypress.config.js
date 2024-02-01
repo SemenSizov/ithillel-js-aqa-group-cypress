@@ -2,6 +2,13 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
+  //reporter: 'mochawesome',
+
+  "reporterOptions":{
+    "overwrire":false,
+    "html":true,
+    "json":false
+  },
   env: {
     config_env: 'config env variable value',
   },

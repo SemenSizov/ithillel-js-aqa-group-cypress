@@ -6,6 +6,6 @@ describe('login page', ()=>{
 
     it('should enter email, password and click checkbox,then verify login', () => {
         cy.login('aklachun77@gmail.com','dragon2024')
-        cy.get('.scrollable').should('be.visible');
+        cy.get('.main-content').should('be.visible');
     });
 })

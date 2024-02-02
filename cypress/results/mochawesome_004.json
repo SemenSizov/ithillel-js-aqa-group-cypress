@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-02T05:22:46.533Z",
+    "end": "2024-02-02T05:22:51.047Z",
+    "duration": 4514,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "85b6b745-5028-4cca-a374-64133aa8eda1",
+      "title": "",
+      "fullFile": "cypress/e2e/homework15/smartTable.cy.js",
+      "file": "cypress/e2e/homework15/smartTable.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dea15167-f6ba-4b92-939e-d0f0faaa613f",
+          "title": "stepper page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create new user, update and check if changes visible",
+              "fullTitle": "stepper page should create new user, update and check if changes visible",
+              "timedOut": null,
+              "duration": 4472,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('th i ').click();\ncy.addUserToTable('12345', 'Anastasiia', 'Klachun', 'kasta.l', 'aklachun77@gmail.com', '23');\ncy.get('.nb-checkmark').click();\ncy.get('ng2-st-tbody-edit-delete > .ng2-smart-action-edit-edit > .nb-edit').first().click();\ncy.get('table-cell-default-editor input[placeholder=\"ID\"]').clear().type('123123123');\ncy.get('.nb-checkmark').click();\ncy.get('ng2-smart-table-cell ').first().should('contain', '123123123');",
+              "err": {},
+              "uuid": "e5353889-089f-4b08-896e-91647c790c60",
+              "parentUUID": "dea15167-f6ba-4b92-939e-d0f0faaa613f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e5353889-089f-4b08-896e-91647c790c60"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4472,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrire": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/results",
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

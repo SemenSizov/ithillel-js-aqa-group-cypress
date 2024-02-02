@@ -4,7 +4,8 @@
   "main": "cypress.config.js",
   "description": "",
   "scripts": {
-    "test": "cypress open",
+    "cy:report": "cypress run --reporter cypress-mochawesome-reporter",
+     "test": "cypress open",
     "test:cli": "cypress run",
     "cy:open": "npx cypress open --e2e --chrome",
     "cy:env": "Set CYPRESS_PROCESS_ENV=process_env_variable_value && npx cypress open --env cli_env=cli_env_variable_value"
@@ -12,10 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.3",
+    "cypress": "^13.6.4",
+    "cypress-mochawesome-reporter": "^3.8.1",
     "mochawesome": "^7.1.3"
-  },
-  "dependencies": {
-    "cypress-mochawesome-reporter": "^3.8.0"
   }
 }

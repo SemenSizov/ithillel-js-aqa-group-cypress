@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-02T05:22:51.927Z",
+    "end": "2024-02-02T05:23:02.611Z",
+    "duration": 10684,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "197acb3b-4b4a-4fb1-a4b0-14406e4836b4",
+      "title": "",
+      "fullFile": "cypress/e2e/homework16/inputValidation.cy.js",
+      "file": "cypress/e2e/homework16/inputValidation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8c778922-7edf-4504-b72b-641fff659471",
+          "title": "login page input validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should check name input negative",
+              "fullTitle": "login page input validation should check name input negative",
+              "timedOut": null,
+              "duration": 1741,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#input-name').type(1);\ncy.get('#input-email').type('aklachun77a@gmail.com');\ncy.get('.caption').should('have.text', ' Full name should contains from 4 to 50 characters ');",
+              "err": {},
+              "uuid": "ad7c8d4d-dc5e-484b-8502-a7f64473d3db",
+              "parentUUID": "8c778922-7edf-4504-b72b-641fff659471",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check name input positive",
+              "fullTitle": "login page input validation should check name input positive",
+              "timedOut": null,
+              "duration": 2159,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#input-name').type(12345);\ncy.get('#input-email').type('aklachun77a@gmail.com');\ncy.get('.caption').should('not.exist');",
+              "err": {},
+              "uuid": "02bcc938-d1bf-4d74-a8c3-02e225fc68ff",
+              "parentUUID": "8c778922-7edf-4504-b72b-641fff659471",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check email input positive",
+              "fullTitle": "login page input validation should check email input positive",
+              "timedOut": null,
+              "duration": 1393,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#input-email').type('aklachun77a@gmail.com');\ncy.get('#input-name').type(12345);\ncy.get('.caption').should('not.exist');",
+              "err": {},
+              "uuid": "8b0a249a-92e4-4c19-8e62-980d488f180d",
+              "parentUUID": "8c778922-7edf-4504-b72b-641fff659471",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check email input negative",
+              "fullTitle": "login page input validation should check email input negative",
+              "timedOut": null,
+              "duration": 1969,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#input-email').type('aklachun');\ncy.get('#input-name').type(12345);\ncy.get('.caption').should('have.text', ' Email should be the real one! ');",
+              "err": {},
+              "uuid": "cc402de5-679a-454d-ba9d-e03766806ba6",
+              "parentUUID": "8c778922-7edf-4504-b72b-641fff659471",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check password input negative",
+              "fullTitle": "login page input validation should check password input negative",
+              "timedOut": null,
+              "duration": 1656,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#input-password').click();\ncy.get('#input-name').type(12345);\ncy.get('.caption').should('have.text', ' Password is required! ');",
+              "err": {},
+              "uuid": "78b1ea85-6040-4bf9-8863-944cef2de59c",
+              "parentUUID": "8c778922-7edf-4504-b72b-641fff659471",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check password repeat input negative",
+              "fullTitle": "login page input validation should check password repeat input negative",
+              "timedOut": null,
+              "duration": 1611,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#input-re-password').click();\ncy.get('#input-name').type(12345);\ncy.get('.caption').should('have.text', ' Password confirmation is required! ');",
+              "err": {},
+              "uuid": "27c8e801-e04a-42ed-a015-80d217898bf3",
+              "parentUUID": "8c778922-7edf-4504-b72b-641fff659471",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ad7c8d4d-dc5e-484b-8502-a7f64473d3db",
+            "02bcc938-d1bf-4d74-a8c3-02e225fc68ff",
+            "8b0a249a-92e4-4c19-8e62-980d488f180d",
+            "cc402de5-679a-454d-ba9d-e03766806ba6",
+            "78b1ea85-6040-4bf9-8863-944cef2de59c",
+            "27c8e801-e04a-42ed-a015-80d217898bf3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10529,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrire": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/results",
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

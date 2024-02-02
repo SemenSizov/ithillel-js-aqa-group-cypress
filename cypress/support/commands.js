@@ -8,12 +8,29 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 
+// Cypress.Commands.add('login', (email, password) => {
+//   cy.visit('/auth/login', {failOnStatusCode: false,})
+//   cy.get('#input-email').type(email)
+//   cy.get('#input-password').type(password)
+//   cy.get('button').contains('Log in', {matchCase: false}).click()
+//  })
+
 Cypress.Commands.add('login', (email, password) => {
-  cy.visit('/auth/login', {failOnStatusCode: false,})
-  cy.get('#input-email').type(email)
-  cy.get('#input-password').type(password)
-  cy.get('button').contains('Log in', {matchCase: false}).click()
- })
+    cy.get('#input-email').type(email)
+    cy.get('#input-password').type(password)
+    cy.get('.custom-checkbox').click()
+    cy.get('button').contains(' Log In ', {matchCase : false}).click()
+})
+
+
+Cypress.Commands.add('addUserToTable', (useriId,firstName,surname,nickname,email,age) => {
+cy.get('table-cell-default-editor input[placeholder="ID"]').type(useriId);
+cy.get('table-cell-default-editor  input[placeholder="First Name"]').type(firstName);
+cy.get('table-cell-default-editor  input[placeholder="Last Name"]').type(surname);
+cy.get('table-cell-default-editor  input[placeholder="Username"]').type(nickname);
+cy.get('table-cell-default-editor  input[placeholder="E-mail"]').type(email);
+cy.get('table-cell-default-editor  input[placeholder="Age"]').type(age);
+})
 
 
  Cypress.Commands.add('init', ()=>{
